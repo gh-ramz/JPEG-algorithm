@@ -10,6 +10,7 @@ JPEG  is a widely used lossy image compression standard that reduces image file 
 
 This project is based on the original repository [josgard94/JPEG](https://github.com/josgard94/JPEG) and has been extended and modularized to allow greater flexibility and experimentation:
 
+- **Extended Image Compatibility:** Significantly improved from the original version, this implementation accepts color images of **any dimensions**. The original code was limited to 256x256 grayscale images. This version incorporates color space transformation (e.g., to YCbCr) to handle color images effectively.
 - Modular design, with distinct scripts for different stages of the JPEG process, for easier modification and testing of different JPEG parameters.
 - Configurable parameters such as:
   - Quantization matrices and quality factors
@@ -28,6 +29,7 @@ The project is structured with the following key Python scripts:
 -   `project_runner.py`: Script to automate the batch processing of multiple images using different parameter sets, calling the above scripts in sequence.
 -   `result/`: Folder where compressed images and potentially intermediate files are saved.
 
+
 ## Usage Instructions
 
 1.  Clone or download the repository.
@@ -40,7 +42,7 @@ The project is structured with the following key Python scripts:
 
 This project is derived and extended from the original work by josgard94: [https://github.com/josgard94/JPEG](https://github.com/josgard94/JPEG)
 
-## Acknowledgments
+##Acknowledgments
 
 This project is developed for educational and research purposes by modularizing and enhancing the original implementation.
 
